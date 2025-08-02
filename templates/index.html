@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Email Sender</title>
+    <link rel="stylesheet" href="/static/style/style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Send an Email</h1>
+
+      <form method="POST">
+        <label for="sender_name">Sender Name</label>
+        <input type="text" id="sender_name" name="sender_name" required />
+
+        <label for="recipient">Recipient Email</label>
+        <textarea
+          id="recipient"
+          name="recipient"
+          rows="4"
+          required
+          placeholder="salam@gmail.com
+        faruq@gmail.com"
+        ></textarea>
+
+        <label for="email-file">Recipient Email uploade</label>
+        <input type="file" id="email-file" name="email-file" accept=".txt" />
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" rows="2" required></textarea>
+
+        <label for="body">Message</label>
+        <textarea id="body" name="body" rows="6" required></textarea>
+
+        <button type="submit">Send Email</button>
+      </form>
+    </div>
+  </body>
+</html>
