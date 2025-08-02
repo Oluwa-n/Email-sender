@@ -20,10 +20,10 @@ mail = Mail(app)
 @app.route("/" , methods = ["GET" , "POST"])
 def index():
     if request.method == "POST":
-        name = request.form.get("sender_name","").replace('/n','')
+        name = request.form.get("sender_name","").replace('/n','').replace("/r",'')
         recipient = request.form.get("recipient")
         File = request.files.get("email-file")
-        subject = request.form.get("subject","").replace('/n','')
+        subject = request.form.get("subject","").replace('/n','').replace("/r",'')
         body = request.form.get("body")
 
         #Getting user input from textarea recipient
